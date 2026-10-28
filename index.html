@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>LUXE DISCOVER | Random Profiles</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0c0c0c;
+        color: #f5f0e8;
+        min-height: 100vh;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 8%;
+        border-bottom: 1px solid #29251d;
+    }
+
+    .logo {
+        color: #d6b56d;
+        font-size: 23px;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    .header-label {
+        color: #a9a49a;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 100px 20px 65px;
+        background: radial-gradient(ellipse at top, #292215 0%, #0c0c0c 65%);
+    }
+
+    .eyebrow {
+        color: #d6b56d;
+        font-size: 12px;
+        letter-spacing: 5px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(42px, 7vw, 82px);
+        font-weight: normal;
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+    h1 span {
+        color: #d6b56d;
+        font-style: italic;
+    }
+
+    .hero p {
+        max-width: 540px;
+        margin: 0 auto;
+        color: #aaa49a;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .action-area {
+        text-align: center;
+        padding: 15px 20px 55px;
+    }
+
+    #discoverButton {
+        background: #d6b56d;
+        color: #15120b;
+        padding: 17px 35px;
+        border: 1px solid #d6b56d;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #discoverButton:hover {
+        background: transparent;
+        color: #d6b56d;
+    }
+
+    #discoverButton:disabled {
+        opacity: 0.5;
+        cursor: wait;
+    }
+
+    #status {
+        color: #d6b56d;
+        margin-top: 25px;
+        min-height: 24px;
+        font-size: 14px;
+    }
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #29251d;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-family: Georgia, serif;
+        font-size: 30px;
+        font-weight: normal;
+    }
+
+    .section-heading span {
+        color: #a9a49a;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .profiles-section {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 25px 90px;
+    }
+
+    #profilesContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+    }
+
+    .profile-card {
+        background: #151515;
+        border: 1px solid #302a1e;
+        padding: 30px 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .profile-card:hover {
+        border-color: #d6b56d;
+        transform: translateY(-5px);
+    }
+
+    .profile-card img {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #d6b56d;
+        padding: 4px;
+        margin-bottom: 22px;
+    }
+
+    .profile-card h3 {
+        font-family: Georgia, serif;
+        font-size: 23px;
+        font-weight: normal;
+        margin-bottom: 12px;
+    }
+
+    .profile-card .location {
+        color: #d6b56d;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+    }
+
+    .profile-card .email {
+        color: #aaa49a;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+        line-height: 1.8;
+    }
+
+    footer {
+        text-align: center;
+        border-top: 1px solid #29251d;
+        padding: 30px 20px;
+        color: #777168;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    @media (max-width: 600px) {
+        header {
+            padding: 22px 5%;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hero {
+            padding-top: 70px;
+        }
+
+        .section-heading {
+            gap: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #discoverButton {
+            width: 100%;
+            max-width: 330px;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+    <div class="logo">LUXE.</div>
+    <div class="header-label">THE PROFILE COLLECTION</div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="eyebrow">DISCOVER SOMETHING NEW</div>
+
+        <h1>People make<br>the <span>world.</span></h1>
+
+        <p>
+            Explore a collection of randomly generated profiles.
+            Discover names, locations, photographs, and contact
+            information powered by a public API.
+        </p>
+    </section>
+
+    <section class="action-area">
+
+        <!-- Clicking this button requests new profiles -->
+        <button id="discoverButton">
+            DISCOVER PROFILES &nbsp; →
+        </button>
+
+        <!-- JavaScript updates this message -->
+        <div id="status" role="status" aria-live="polite">
+            Your collection is waiting to be discovered.
+        </div>
+
+    </section>
+
+    <section class="profiles-section">
+
+        <div class="section-heading">
+            <h2>The Collection</h2>
+            <span>RANDOMLY GENERATED PROFILES</span>
+        </div>
+
+        <!-- JavaScript inserts profile cards here -->
+        <div id="profilesContainer"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    LUXE DISCOVER &nbsp; | &nbsp; POWERED BY JAVASCRIPT AND AXIOS
+</footer>
+
+<!-- Load Axios before our JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
